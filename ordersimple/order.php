@@ -6,8 +6,8 @@
 	<form method="POST" action="purchase.php">
 		<table class="table table-striped table-bordered">
 			<thead>
-				<!-- <th class="text-center"><input type="checkbox" id="checkAll"></th>
- -->				<th>Category</th>
+				<th class="text-center"><input type="checkbox" id="checkAll"></th>
+ 				<th>Category</th>
 				<th>Product Name</th>
 				<th>Price</th>
 				<th>Quantity</th>
@@ -20,7 +20,7 @@
 					while($row=$query->fetch_array()){
 						?>
 						<tr>
-							<!-- <td class="text-center"><input type="checkbox" value="<?php echo $row['productid']; ?>||<?php echo $iterate; ?>" name="productid[]" style=""></td> -->
+						 <td class="text-center"><input type="checkbox" value="<?php echo $row['productid']; ?>||<?php echo $iterate; ?>" name="productid[]" style=""></td>
 							<td><?php echo $row['catname']; ?></td>
 							<td><?php echo $row['productname']; ?></td>
 							<td class="text-right">&#x20A8; <?php echo number_format($row['price'], 2); ?></td>
@@ -35,17 +35,17 @@
 		
 		<div class="row">
 			<div class="col-md-2" style="margin-left:-20px;">
-				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk">Submit</span> </button>
+				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>Submit</button>
 			</div>
 		</div>
 	</form>
 </div>
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 	$(document).ready(function(){
 		$("#checkAll").click(function(){
 	    	$('input:checkbox').not(this).prop('checked', this.checked);
 		});
 	});
-</script> -->
+</script> 
 </body>
 </html>
